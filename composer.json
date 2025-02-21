@@ -1,0 +1,20 @@
+{
+    "name": "austin/alipay-sdk",
+    "type": "library",
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Austin\\AlipaySdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "austin",
+            "email": "austin@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
