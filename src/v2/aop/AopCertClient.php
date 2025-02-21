@@ -342,7 +342,7 @@ class AopCertClient
         }
 
         ($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
-        $blocks = $this->splitCN($data, 0, 30, $charset);
+        $blocks = $this->splitCN($data, 30, $charset);
         $chrtext  = null;
         $encodes  = array();
         foreach ($blocks as $n => $block) {
@@ -386,11 +386,11 @@ class AopCertClient
         return $strnull;
     }
 
-    function splitCN($cont, $n = 0, $subnum, $charset) {
+    function splitCN($cont, $subnum, $charset, $n = 0) {
         //$len = strlen($cont) / 3;
         $arrr = array();
         for ($i = $n; $i < strlen($cont); $i += $subnum) {
-            $res = $this->subCNchar($cont, $i, $subnum, $charset);
+            $res = $this->subCNchar($cont, $subnum, $charset, $i);
             if (!empty ($res)) {
                 $arrr[] = $res;
             }
@@ -399,7 +399,7 @@ class AopCertClient
         return $arrr;
     }
 
-    function subCNchar($str, $start = 0, $length, $charset = "gbk") {
+    function subCNchar($str, $length, $charset = "gbk", $start = 0) {
         if (strlen($str) <= $length) {
             return $str;
         }

@@ -1,4 +1,3 @@
-
 <?php
 class AlipayConfig {
     /**
@@ -190,7 +189,7 @@ class AlipayConfig {
         return $this->skipSign;
     }
 
-    public function setSkipSign(bool $skipSign)
+    public function setSkipSign($skipSign)
     {
         $this->skipSign = $skipSign;
     }

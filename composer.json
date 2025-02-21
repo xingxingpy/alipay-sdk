@@ -2,7 +2,7 @@
     "name": "austin/alipay-sdk",
     "type": "library",
     "require": {
-        "php": ">=8.0"
+        "php": ">=5.6"
     },
     "license": "MIT",
     "autoload": {
