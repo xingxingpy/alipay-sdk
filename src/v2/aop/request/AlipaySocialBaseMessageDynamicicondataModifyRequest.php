@@ -1,4 +1,6 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop\request;
 /**
  * ALIPAY API: alipay.social.base.message.dynamicicondata.modify request
  *

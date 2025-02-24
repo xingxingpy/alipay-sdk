@@ -1,10 +1,7 @@
 <?php
 
-require_once 'AopEncrypt.php';
-require_once 'EncryptParseItem.php';
-require_once 'EncryptResponseData.php';
-require_once 'SignData.php';
-require_once 'AlipayConfig.php';
+namespace Xingxingpy\AlipaySdk\v2\aop;
+
 class AopClient
 {
     //应用ID
@@ -623,7 +620,6 @@ class AopClient
 
         //返回的HTTP文本不是标准JSON或者XML，记下错误日志
         if (false === $respWellFormed) {
-            var_dump(333);
             $this->logCommunicationError($sysParams["method"], $requestUrl, "HTTP_RESPONSE_NOT_WELL_FORMED", $resp);
             return false;
         }
@@ -848,7 +844,7 @@ class AopClient
         }
 
         ($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
-        $blocks = $this->splitCN($data, 0, 30, $charset);
+        $blocks = $this->splitCN($data, 30, $charset);
         $chrtext  = null;
         $encodes  = array();
         foreach ($blocks as $n => $block) {
@@ -893,12 +889,12 @@ class AopClient
         return $strnull;
     }
 
-    function splitCN($cont, $n = 0, $subnum, $charset)
+    function splitCN($cont, $subnum, $charset, $n = 0)
     {
         //$len = strlen($cont) / 3;
         $arrr = array();
         for ($i = $n; $i < strlen($cont); $i += $subnum) {
-            $res = $this->subCNchar($cont, $i, $subnum, $charset);
+            $res = $this->subCNchar($cont, $subnum, $charset, $i);
             if (!empty ($res)) {
                 $arrr[] = $res;
             }
@@ -907,7 +903,7 @@ class AopClient
         return $arrr;
     }
 
-    function subCNchar($str, $start = 0, $length, $charset = "gbk")
+    function subCNchar($str, $length, $charset = "gbk", $start = 0)
     {
         if (strlen($str) <= $length) {
             return $str;

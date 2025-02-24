@@ -1,5 +1,7 @@
 <?php
 
+namespace Xingxingpy\AlipaySdk\v2\aop;
+
 /**
  * 验证支付宝公钥证书是否可信
  * @param $alipayCert 支付宝公钥证书

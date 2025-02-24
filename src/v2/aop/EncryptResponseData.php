@@ -1,4 +1,7 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop;
+
 /**
  *  TODO 补充说明
  *

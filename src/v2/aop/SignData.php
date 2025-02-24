@@ -1,4 +1,7 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop;
+
 /**
  * Created by PhpStorm.
  * User: jiehua

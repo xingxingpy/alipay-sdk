@@ -1,4 +1,7 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop;
+
 class AlipayConfig {
     /**
      * 网关地址

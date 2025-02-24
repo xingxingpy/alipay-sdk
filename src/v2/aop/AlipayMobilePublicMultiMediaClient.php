@@ -1,12 +1,13 @@
 <?php
 
+namespace Xingxingpy\AlipaySdk\v2\aop;
+
 /**
  * 多媒体文件客户端
  * @author yikai.hu
  * @version $Id: AlipayMobilePublicMultiMediaClient.php, v 0.1 Aug 15, 2014 10:19:01 AM yikai.hu Exp $
  */
 
-include("AlipayMobilePublicMultiMediaExecute.php");
 
 class AlipayMobilePublicMultiMediaClient
 {

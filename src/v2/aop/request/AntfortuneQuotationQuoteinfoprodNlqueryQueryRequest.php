@@ -1,4 +1,6 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop\request;
 /**
  * ALIPAY API: antfortune.quotation.quoteinfoprod.nlquery.query request
  *

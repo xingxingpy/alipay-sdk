@@ -1,4 +1,7 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop\schema;
+
 require_once 'XMLAttribute.php';
 require_once 'AttributeRule.php';
 require_once 'Option.php';

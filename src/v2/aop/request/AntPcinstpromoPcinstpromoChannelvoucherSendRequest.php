@@ -1,4 +1,6 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop\request;
 /**
  * ALIPAY API: ant.pcinstpromo.pcinstpromo.channelvoucher.send request
  *

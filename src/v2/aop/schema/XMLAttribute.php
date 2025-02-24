@@ -1,5 +1,6 @@
 <?php
 
+namespace Xingxingpy\AlipaySdk\v2\aop\schema;
 class XMLAttribute
 {
     private $id;

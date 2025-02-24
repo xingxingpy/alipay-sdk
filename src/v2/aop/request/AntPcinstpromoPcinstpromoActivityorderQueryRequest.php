@@ -1,4 +1,6 @@
 <?php
+
+namespace Xingxingpy\AlipaySdk\v2\aop\request;
 /**
  * ALIPAY API: ant.pcinstpromo.pcinstpromo.activityorder.query request
  *
