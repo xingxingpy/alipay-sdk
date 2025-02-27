@@ -66,12 +66,10 @@ function verifyCert($prev, $rootCerts)
 {
     $nowTime = time();
     if ($nowTime < $prev['validFrom_time_t']) {
-        echo "证书未激活";
-        return false;
+        throw new \Exception("证书未激活");
     }
     if ($nowTime > $prev['validTo_time_t']) {
-        echo "证书已经过期";
-        return false;
+        throw new \Exception("证书已经过期");
     }
     $subjectMap = null;
     for ($i = 0; $i < count($rootCerts); $i++) {
@@ -80,8 +78,7 @@ function verifyCert($prev, $rootCerts)
     }
     $issuerDN = array2string(($prev['issuer']));
     if (!array_key_exists($issuerDN, $subjectMap)) {
-        echo "证书链验证失败";
-        return false;
+        throw new \Exception("证书链验证失败");
     }
     return true;
 }
@@ -95,8 +92,7 @@ function verifyCertChain($alipayCerts, $rootCerts)
 {
     $sorted = sortByDn($alipayCerts);
     if (!$sorted) {
-        echo "证书链验证失败：不是完整的证书链";
-        return false;
+        throw new \Exception("证书链验证失败：不是完整的证书链");
     }
     //先验证第一个证书是不是信任库中证书签发的
     $prev = $alipayCerts[0];
@@ -111,12 +107,10 @@ function verifyCertChain($alipayCerts, $rootCerts)
     for ($i = 1; $i < $length; $i++) {
         $cert = $alipayCerts[$i];
         if ($nowTime < $cert['validFrom_time_t']) {
-            echo "证书未激活";
-            return false;
+            throw new \Exception("证书未激活");
         }
         if ($nowTime > $cert['validTo_time_t']) {
-            echo "证书已经过期";
-            return false;
+            throw new \Exception("证书已经过期");
         }
     }
     return true;
@@ -298,13 +292,13 @@ function getSignatureAlgorithmOid($der = null)
     $bit_seq2 = 2;
     $bit_oid = 4;
     if (ord($der[$bit_seq1]) !== 0x30) {
-        die('Invalid DER passed to getSignatureAlgorithmOid()');
+        throw new \Exception('Invalid DER passed to getSignatureAlgorithmOid()');
     }
     if (ord($der[$bit_seq2]) !== 0x30) {
-        die('Invalid DER passed to getSignatureAlgorithmOid()');
+        throw new \Exception('Invalid DER passed to getSignatureAlgorithmOid()');
     }
     if (ord($der[$bit_oid]) !== 0x06) {
-        die('Invalid DER passed to getSignatureAlgorithmOid');
+        throw new \Exception('Invalid DER passed to getSignatureAlgorithmOid()');
     }
     // strip out what we don't need and get the oid
     $der = substr($der, $bit_oid);
@@ -355,12 +349,12 @@ function getSignatureHash($der = null)
         return false;
     }
     if (ord($der[0]) !== 0x30) {
-        die('Invalid DER passed to getSignatureHash()');
+        throw new \Exception('Invalid DER passed to getSignatureHash()');
     }
     // strip out the container sequence
     $der = substr($der, 2);
     if (ord($der[0]) !== 0x30) {
-        die('Invalid DER passed to getSignatureHash()');
+        throw new \Exception('Invalid DER passed to getSignatureHash()');
     }
     // Get the length of the first sequence so we can strip it out.
     $len = ord($der[1]);
@@ -375,7 +369,7 @@ function getSignatureHash($der = null)
     $der = substr($der, 2 + $bytes + $len);
     // Now we should have an octet string
     if (ord($der[0]) !== 0x04) {
-        die('Invalid DER passed to getSignatureHash()');
+        throw new \Exception('Invalid DER passed to getSignatureHash()');
     }
     $len = ord($der[1]);
     $bytes = 0;
@@ -400,13 +394,13 @@ function getSignatureHash($der = null)
 function isCertSigner($certPem = null, $caCertPem = null)
 {
     if (!function_exists('openssl_pkey_get_public')) {
-        die('Need the openssl_pkey_get_public() function.');
+        throw new \Exception('Need the openssl_pkey_get_public() function.');
     }
     if (!function_exists('openssl_public_decrypt')) {
-        die('Need the openssl_public_decrypt() function.');
+        throw new \Exception('Need the openssl_public_decrypt() function.');
     }
     if (!function_exists('hash')) {
-        die('Need the php hash() function.');
+        throw new \Exception('Need the php hash() function.');
     }
     if (empty($certPem) or empty($caCertPem)) {
         return false;
@@ -414,18 +408,18 @@ function isCertSigner($certPem = null, $caCertPem = null)
     // Convert the cert to der for feeding to extractSignature.
     $certDer = pemToDer($certPem);
     if (!is_string($certDer)) {
-        die('invalid certPem');
+        throw new \Exception('invalid certPem');
     }
     // Grab the encrypted signature from the der encoded cert.
     $encryptedSig = extractSignature($certDer);
     if (!is_string($encryptedSig)) {
-        die('Failed to extract encrypted signature from certPem.');
+        throw new \Exception('Failed to extract encrypted signature from certPem.');
     }
     // Extract the public key from the ca cert, which is what has
     // been used to encrypt the signature in the cert.
     $pubKey = openssl_pkey_get_public($caCertPem);
     if ($pubKey === false) {
-        die('Failed to extract the public key from the ca cert.');
+        throw new \Exception('Failed to extract the public key from the ca cert.');
     }
     // Attempt to decrypt the encrypted signature using the CA's public
     // key, returning the decrypted signature in $decryptedSig.  If
@@ -441,14 +435,14 @@ function isCertSigner($certPem = null, $caCertPem = null)
     // signature information.
     $origCert = stripSignerAsn($certDer);
     if ($origCert === false) {
-        die('Failed to extract unsigned cert.');
+        throw new \Exception('Failed to extract unsigned cert.');
     }
     // Get the oid of the signature hash algorithm, which is required
     // to generate our own hash of the original cert.  This hash is
     // what will be compared to the issuers hash.
     $oid = getSignatureAlgorithmOid($decryptedSig);
     if ($oid === false) {
-        die('Failed to determine the signature algorithm.');
+        throw new \Exception('Failed to determine the signature algorithm.');
     }
     switch ($oid) {
         case '1.2.840.113549.2.2':
@@ -476,7 +470,7 @@ function isCertSigner($certPem = null, $caCertPem = null)
             $algo = 'sha512';
             break;
         default:
-            die('Unknown signature hash algorithm oid: ' . $oid);
+            throw new \Exception('Unknown signature hash algorithm oid: ' . $oid);
             break;
     }
     // Get the issuer generated hash from the decrypted signature.

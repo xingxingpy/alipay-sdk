@@ -280,8 +280,7 @@ class AopCertClient
         $bizContent = $params['biz_content'];
         if ($isCheckSign) {
             if (!$this->rsaCheckV2($params, $rsaPublicKeyPem, $signType)) {
-                echo "<br/>checkSign failure<br/>";
-                exit;
+                throw new \Exception('checkSign failure');
             }
         }
         if ($isDecrypt) {
@@ -337,15 +336,22 @@ class AopCertClient
             $res = openssl_get_publickey($pubKey);
         }
 
-        ($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
+        if (!$res) {
+            throw new \Exception('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
+        }
+
         $blocks = $this->splitCN($data, 30, $charset);
         $chrtext  = null;
         $encodes  = array();
+        $errorMessage = [];
         foreach ($blocks as $n => $block) {
             if (!openssl_public_encrypt($block, $chrtext , $res)) {
-                echo "<br/>" . openssl_error_string() . "<br/>";
+                $errorMessage[] = openssl_error_string();
             }
             $encodes[] = $chrtext ;
+        }
+        if ($errorMessage) {
+            throw new \Exception('RSA加密错误，' . implode(":", $errorMessage));
         }
         $chrtext = implode(",", $encodes);
 
@@ -368,16 +374,22 @@ class AopCertClient
             $priKey = file_get_contents($this->rsaPrivateKeyFilePath);
             $res = openssl_get_privatekey($priKey);
         }
-        ($res) or die('您使用的私钥格式错误，请检查RSA私钥配置');
+        if (!$res) {
+            throw new \Exception('您使用的私钥格式错误，请检查RSA私钥配置');
+        }
         //转换为openssl格式密钥
         $decodes = explode(',', $data);
         $strnull = "";
         $dcyCont = "";
+        $errorMessage = [];
         foreach ($decodes as $n => $decode) {
             if (!openssl_private_decrypt($decode, $dcyCont, $res)) {
-                echo "<br/>" . openssl_error_string() . "<br/>";
+                $errorMessage[] = openssl_error_string();
             }
             $strnull .= $dcyCont;
+        }
+        if ($errorMessage) {
+            throw new \Exception('RSA解密错误，' . implode(":", $errorMessage));
         }
         return $strnull;
     }
@@ -752,7 +764,9 @@ class AopCertClient
             $res = openssl_get_privatekey($priKey);
         }
 
-        ($res) or die('您使用的私钥格式错误，请检查RSA私钥配置');
+        if (!$res) {
+            throw new \Exception('您使用的私钥格式错误，请检查RSA私钥配置');
+        }
 
         if ("RSA2" == $signType) {
             openssl_sign($data, $sign, $res, OPENSSL_ALGO_SHA256);
@@ -810,7 +824,9 @@ class AopCertClient
             $priKey = file_get_contents($privatekey);
             $res = openssl_get_privatekey($priKey);
         }
-        ($res) or die('您使用的私钥格式错误，请检查RSA私钥配置');
+        if (!$res) {
+            throw new \Exception('您使用的私钥格式错误，请检查RSA私钥配置');
+        }
         if ("RSA2" == $signType) {
             openssl_sign($data, $sign, $res, OPENSSL_ALGO_SHA256);
         } else {
@@ -920,7 +936,8 @@ class AopCertClient
             $errorCode,
             str_replace("\n", "", $responseTxt)
         );
-        echo json_encode($logData);
+
+        throw new \Exception(json_encode($logData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
     }
 
     /**
@@ -1184,7 +1201,9 @@ class AopCertClient
             //转换为openssl格式密钥
             $res = openssl_get_publickey($pubKey);
         }
-        ($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
+        if(!$res){
+            throw new \Exception('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
+        }
         //调用openssl内置方法验签，返回bool值
         $result = FALSE;
         if ("RSA2" == $signType) {
@@ -1290,11 +1309,5 @@ class AopCertClient
         $encryptParseItem->startIndex = $signDataStartIndex;
         $encryptParseItem->endIndex = $indexOfXmlNode+strlen($xmlEndNode);
         return $encryptParseItem;
-    }
-
-    function echoDebug($content) {
-        if ($this->debugInfo) {
-            echo "<br/>" . $content;
-        }
     }
 }

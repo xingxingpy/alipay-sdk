@@ -84,8 +84,6 @@ class AlipayMobilePublicMultiMediaClient
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        echo $output;
-
         $datas = explode("\r\n\r\n", $output, 2);
         $header = $datas[0];
 
