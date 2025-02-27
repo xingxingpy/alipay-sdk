@@ -33,7 +33,7 @@ class ServiceSchemaReader
         $dom = new DOMDocument('1.0', 'utf-8');
         try {
             $dom->loadXML($xmlString);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new \Exception("XML格式错误,无法正常解析!");
         }
         return self::readXmlForList($dom->documentElement);
