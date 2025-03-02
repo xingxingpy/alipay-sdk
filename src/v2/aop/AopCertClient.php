@@ -2,6 +2,9 @@
 
 namespace Xingxingpy\AlipaySdk\v2\aop;
 
+require_once(__DIR__ . '/AopCertification.php');
+require_once(__DIR__ . '/AopEncrypt.php');
+
 class AopCertClient
 {
     //应用证书地址

@@ -1,7 +1,5 @@
 <?php
 
-namespace Xingxingpy\AlipaySdk\v2\aop;
-
 /**
  *   加密工具类
  *
