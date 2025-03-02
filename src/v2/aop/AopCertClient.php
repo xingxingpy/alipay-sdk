@@ -511,7 +511,7 @@ class AopCertClient
                 throw new \Exception("加密类型只支持AES");
             }
             // 执行加密
-            $enCryptContent = encrypt($apiParams['biz_content'], $this->encryptKey);
+            $enCryptContent = AopEncrypt::encrypt($apiParams['biz_content'], $this->encryptKey);
             $apiParams['biz_content'] = $enCryptContent;
         }
         $totalParams = array_merge($apiParams, $sysParams);
@@ -640,7 +640,7 @@ class AopCertClient
                 throw new \Exception("加密类型只支持AES");
             }
             // 执行加密
-            $enCryptContent = encrypt($apiParams['biz_content'], $this->encryptKey);
+            $enCryptContent = AopEncrypt::encrypt($apiParams['biz_content'], $this->encryptKey);
             $apiParams['biz_content'] = $enCryptContent;
         }
 
@@ -1132,7 +1132,7 @@ class AopCertClient
                         $cert = base64_decode($certContent);
                         $certCheck = true;
                         if(!empty($this->alipayRootCertContent) && $this->isCheckAlipayPublicCert){
-                            $certCheck = isTrusted($cert,$this->alipayRootCertContent);
+                            $certCheck = AopCertification::isTrusted($cert,$this->alipayRootCertContent);
                         }
                         if($certCheck){
                             $pkey = openssl_pkey_get_public($cert);
