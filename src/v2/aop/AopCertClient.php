@@ -2,9 +2,6 @@
 
 namespace Xingxingpy\AlipaySdk\v2\aop;
 
-require_once(__DIR__ . '/AopCertification.php');
-require_once(__DIR__ . '/AopEncrypt.php');
-
 class AopCertClient
 {
     //应用证书地址
@@ -110,7 +107,7 @@ class AopCertClient
     {
         $cert = file_get_contents($certPath);
         $ssl = openssl_x509_parse($cert);
-        $SN = md5(array2string(array_reverse($ssl['issuer'])) . $ssl['serialNumber']);
+        $SN = md5(AopCertification::array2string(array_reverse($ssl['issuer'])) . $ssl['serialNumber']);
         return $SN;
     }
     /**
@@ -120,12 +117,12 @@ class AopCertClient
      */
     public function getCertSNFromContent($certContent){
         $ssl = openssl_x509_parse($certContent);
-        $SN = md5(array2string(array_reverse($ssl['issuer'])) . $ssl['serialNumber']);
+        $SN = md5(AopCertification::array2string(array_reverse($ssl['issuer'])) . $ssl['serialNumber']);
         return $SN;
     }
     /**
      * 提取根证书序列号
-     * @param $cert  根证书
+     * @param $cert  mixed 根证书
      * @return string|null
      */
     public function getRootCertSN($certPath)
@@ -141,10 +138,10 @@ class AopCertClient
             }
             if ($ssl[$i]['signatureTypeLN'] == "sha1WithRSAEncryption" || $ssl[$i]['signatureTypeLN'] == "sha256WithRSAEncryption") {
                 if ($SN == null) {
-                    $SN = md5(array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
+                    $SN = md5(AopCertification::array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
                 } else {
 
-                    $SN = $SN . "_" . md5(array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
+                    $SN = $SN . "_" . md5(AopCertification::array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
                 }
             }
         }
@@ -152,7 +149,7 @@ class AopCertClient
     }
     /**
      * 提取根证书序列号
-     * @param $certContent  根证书
+     * @param $certContent  mixed 根证书
      * @return string|null
      */
     public function getRootCertSNFromContent($certContent){
@@ -166,10 +163,10 @@ class AopCertClient
             }
             if ($ssl[$i]['signatureTypeLN'] == "sha1WithRSAEncryption" || $ssl[$i]['signatureTypeLN'] == "sha256WithRSAEncryption") {
                 if ($SN == null) {
-                    $SN = md5(array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
+                    $SN = md5(AopCertification::array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
                 } else {
 
-                    $SN = $SN . "_" . md5(array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
+                    $SN = $SN . "_" . md5(AopCertification::array2string(array_reverse($ssl[$i]['issuer'])) . $ssl[$i]['serialNumber']);
                 }
             }
         }
@@ -425,8 +422,8 @@ class AopCertClient
 
     /**
      * 生成用于调用收银台SDK的字符串
-     * @param $request SDK接口的请求参数对象
-     * @param $appAuthToken 三方应用授权token
+     * @param $request mixed SDK接口的请求参数对象
+     * @param $appAuthToken mixed 三方应用授权token
      * @return string
      */
     public function sdkExecute($request, $appAuthToken = null) {
@@ -460,11 +457,11 @@ class AopCertClient
 
     /**
      * 页面提交执行方法
-     * @param $request 跳转类接口的request
+     * @param $request mixed 跳转类接口的request
      * @param string $httpmethod 提交方式,两个值可选：post、get;
      * @param null $appAuthToken 三方应用授权token
-     * @return 构建好的、签名后的最终跳转URL（GET）或String形式的form（POST）
-     * @throws Exception
+     * @return mixed 构建好的、签名后的最终跳转URL（GET）或String形式的form（POST）
+     * @throws \Exception
      */
     public function pageExecute($request, $httpmethod = "POST", $appAuthToken = null) {
 
@@ -558,8 +555,8 @@ class AopCertClient
 
     /**
      * 建立请求，以表单HTML形式构造（默认）
-     * @param $para_temp 请求参数数组
-     * @return 提交表单HTML文本
+     * @param $para_temp mixed 请求参数数组
+     * @return mixed 提交表单HTML文本
      */
     protected function buildRequestForm($para_temp) {
         $sHtml = "<form id='alipaysubmit' name='alipaysubmit' action='".$this->gatewayUrl."?charset=".trim($this->postCharset)."' method='POST'>";
@@ -810,10 +807,10 @@ class AopCertClient
 
     /**
      * RSA单独签名方法，未做字符串处理,字符串处理见getSignContent()
-     * @param $data 待签名字符串
-     * @param $privatekey 商户私钥，根据keyfromfile来判断是读取字符串还是读取文件，false:填写私钥字符串去回车和空格 true:填写私钥文件路径
-     * @param $signType 签名方式，RSA:SHA1     RSA2:SHA256
-     * @param $keyfromfile 私钥获取方式，读取字符串还是读文件
+     * @param $data mixed 待签名字符串
+     * @param $privatekey mixed 商户私钥，根据keyfromfile来判断是读取字符串还是读取文件，false:填写私钥字符串去回车和空格 true:填写私钥文件路径
+     * @param $signType mixed 签名方式，RSA:SHA1     RSA2:SHA256
+     * @param $keyfromfile mixed 私钥获取方式，读取字符串还是读文件
      * @return string
      */
     public function alonersaSign($data,$privatekey,$signType = "RSA",$keyfromfile=false) {

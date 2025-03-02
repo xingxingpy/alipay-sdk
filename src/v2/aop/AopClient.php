@@ -2,9 +2,6 @@
 
 namespace Xingxingpy\AlipaySdk\v2\aop;
 
-require_once(__DIR__ . '/AopCertification.php');
-require_once(__DIR__ . '/AopEncrypt.php');
-
 class AopClient
 {
     //应用ID
@@ -1268,7 +1265,7 @@ class AopClient
 
         $bodyIndexContent = substr($responseContent, 0, $parsetItem->startIndex);
         $bodyEndContent = substr($responseContent, $parsetItem->endIndex, strlen($responseContent) + 1 - $parsetItem->endIndex);
-        $bizContent = decrypt($parsetItem->encryptContent, $this->encryptKey);
+        $bizContent = AopEncrypt::decrypt($parsetItem->encryptContent, $this->encryptKey);
 
         return $bodyIndexContent . $bizContent . $bodyEndContent;
 

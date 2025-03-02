@@ -1,26 +1,27 @@
 {
-    "name": "xingxingpy/alipay-sdk",
-    "type": "library",
-    "require": {
-        "php": ">=5.6"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Xingxingpy\\AlipaySdk\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "austin",
-            "email": "austin@gmail.com"
-        }
-    ],
-    "archive": {
-        "exclude": [
-            "tests",
-            "origin"
-        ]
-    },
-    "minimum-stability": "stable"
+  "name": "xingxingpy/alipay-sdk",
+  "type": "library",
+  "require": {
+    "php": ">=5.6",
+    "ext-openssl": "*"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Xingxingpy\\AlipaySdk\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "austin",
+      "email": "austin@gmail.com"
+    }
+  ],
+  "archive": {
+    "exclude": [
+      "tests",
+      "origin"
+    ]
+  },
+  "minimum-stability": "stable"
 }
