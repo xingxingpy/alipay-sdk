@@ -647,7 +647,8 @@ class AopCertClient
         //系统参数放入GET请求串
         $requestUrl = $this->gatewayUrl . "?";
         foreach ($sysParams as $sysParamKey => $sysParamValue) {
-            $requestUrl .= "$sysParamKey=" . urlencode($this->characet($sysParamValue, $this->postCharset)) . "&";
+            $valueContent = $this->characet($sysParamValue, $this->postCharset);
+            $requestUrl .= "$sysParamKey=" . urlencode($valueContent ?: '') . "&";
         }
         $requestUrl = substr($requestUrl, 0, -1);
 
@@ -1107,7 +1108,8 @@ class AopCertClient
                     //系统参数放入GET请求串
                     $requestUrl = $this->gatewayUrl . "?";
                     foreach ($sysParams as $sysParamKey => $sysParamValue) {
-                        $requestUrl .= "$sysParamKey=" . urlencode($this->characet($sysParamValue, $this->postCharset)) . "&";
+                        $valueContent = $this->characet($sysParamValue, $this->postCharset);
+                        $requestUrl .= "$sysParamKey=" . urlencode($valueContent ?: '') . "&";
                     }
                     $requestUrl = substr($requestUrl, 0, -1);
                     //发起HTTP请求
@@ -1122,8 +1124,8 @@ class AopCertClient
                     $r = iconv($this->postCharset, $this->fileCharset . "//IGNORE", $resp);
 
                     $respObject = json_decode($r);
-                    $resultCode = $respObject->alipay_open_app_alipaycert_download_response->code;
-                    $certContent = $respObject->alipay_open_app_alipaycert_download_response->alipay_cert_content;
+                    $resultCode = isset($respObject->alipay_open_app_alipaycert_download_response->code) ? $respObject->alipay_open_app_alipaycert_download_response->code : null;
+                    $certContent = isset($respObject->alipay_open_app_alipaycert_download_response->alipay_cert_content) ? $respObject->alipay_open_app_alipaycert_download_response->alipay_cert_content : null;
 
                     if (!empty($resultCode) && $resultCode == 10000 && !empty($certContent)) {
                         $cert = base64_decode($certContent);
