@@ -653,12 +653,7 @@ class AopCertClient
         $requestUrl = substr($requestUrl, 0, -1);
 
         //发起HTTP请求
-        try {
-            $resp = $this->curl($requestUrl, $apiParams);
-        } catch (\Exception $e) {
-            $this->logCommunicationError($sysParams["method"], $requestUrl, "HTTP_ERROR_" . $e->getCode(), $e->getMessage());
-            return false;
-        }
+        $resp = $this->curl($requestUrl, $apiParams);
 
         //解析AOP返回结果
         $respWellFormed = false;
@@ -685,8 +680,7 @@ class AopCertClient
 
         //返回的HTTP文本不是标准JSON或者XML，记下错误日志
         if (false === $respWellFormed) {
-            $this->logCommunicationError($sysParams["method"], $requestUrl, "HTTP_RESPONSE_NOT_WELL_FORMED", $resp);
-            return false;
+            throw new \Exception($resp);
         }
 
         // 验签
@@ -1113,12 +1107,7 @@ class AopCertClient
                     }
                     $requestUrl = substr($requestUrl, 0, -1);
                     //发起HTTP请求
-                    try {
-                        $resp = $this->curl($requestUrl, $apiParams);
-                    } catch (\Exception $e) {
-                        $this->logCommunicationError($sysParams["method"], $requestUrl, "HTTP_ERROR_" . $e->getCode(), $e->getMessage());
-                        return false;
-                    }
+                    $resp = $this->curl($requestUrl, $apiParams);
 
                     // 将返回结果转换本地文件编码
                     $r = iconv($this->postCharset, $this->fileCharset . "//IGNORE", $resp);
