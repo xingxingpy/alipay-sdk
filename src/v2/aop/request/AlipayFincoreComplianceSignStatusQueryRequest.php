@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.fincore.compliance.sign.status.query request
  *
  * @author auto create
- * @since 1.0, 2024-08-02 16:32:22
+ * @since 1.0, 2025-03-13 10:52:27
  */
 class AlipayFincoreComplianceSignStatusQueryRequest
 {

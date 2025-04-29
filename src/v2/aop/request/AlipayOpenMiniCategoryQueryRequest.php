@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.mini.category.query request
  *
  * @author auto create
- * @since 1.0, 2024-11-05 10:57:22
+ * @since 1.0, 2025-03-13 11:12:59
  */
 class AlipayOpenMiniCategoryQueryRequest
 {

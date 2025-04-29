@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: ant.merchant.expand.apprecommend.account.query request
  *
  * @author auto create
- * @since 1.0, 2024-07-04 16:52:05
+ * @since 1.0, 2025-04-01 11:32:31
  */
 class AntMerchantExpandApprecommendAccountQueryRequest
 {

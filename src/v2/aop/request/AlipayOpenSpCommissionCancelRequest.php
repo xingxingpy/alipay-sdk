@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.sp.commission.cancel request
  *
  * @author auto create
- * @since 1.0, 2025-01-05 10:07:23
+ * @since 1.0, 2025-03-19 14:12:27
  */
 class AlipayOpenSpCommissionCancelRequest
 {

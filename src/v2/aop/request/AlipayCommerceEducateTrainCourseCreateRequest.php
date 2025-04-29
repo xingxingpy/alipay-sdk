@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.educate.train.course.create request
  *
  * @author auto create
- * @since 1.0, 2024-07-04 16:55:11
+ * @since 1.0, 2025-04-14 11:19:08
  */
 class AlipayCommerceEducateTrainCourseCreateRequest
 {

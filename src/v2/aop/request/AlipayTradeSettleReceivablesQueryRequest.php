@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.trade.settle.receivables.query request
  *
  * @author auto create
- * @since 1.0, 2024-04-17 21:57:02
+ * @since 1.0, 2025-02-25 10:24:24
  */
 class AlipayTradeSettleReceivablesQueryRequest
 {

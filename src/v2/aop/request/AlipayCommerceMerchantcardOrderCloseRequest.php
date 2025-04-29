@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.merchantcard.order.close request
  *
  * @author auto create
- * @since 1.0, 2025-01-16 10:38:39
+ * @since 1.0, 2025-04-09 11:07:30
  */
 class AlipayCommerceMerchantcardOrderCloseRequest
 {

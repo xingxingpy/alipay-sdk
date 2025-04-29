@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: ant.merchant.expand.indirect.zftsubsettle.query request
  *
  * @author auto create
- * @since 1.0, 2024-07-04 19:33:17
+ * @since 1.0, 2025-03-19 10:44:52
  */
 class AntMerchantExpandIndirectZftsubsettleQueryRequest
 {

@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.retail.activity.consult request
  *
  * @author auto create
- * @since 1.0, 2024-12-04 14:22:19
+ * @since 1.0, 2025-03-12 14:42:24
  */
 class AlipayCommerceRetailActivityConsultRequest
 {

@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.mini.order.delivery.send request
  *
  * @author auto create
- * @since 1.0, 2024-11-22 16:17:17
+ * @since 1.0, 2025-04-15 21:22:27
  */
 class AlipayOpenMiniOrderDeliverySendRequest
 {

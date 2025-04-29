@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: ant.merchant.expand.bizaccess.order.create request
  *
  * @author auto create
- * @since 1.0, 2025-02-10 18:02:22
+ * @since 1.0, 2025-04-10 19:37:30
  */
 class AntMerchantExpandBizaccessOrderCreateRequest
 {

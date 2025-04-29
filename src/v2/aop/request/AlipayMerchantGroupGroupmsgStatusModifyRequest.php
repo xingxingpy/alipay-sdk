@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.merchant.group.groupmsg.status.modify request
  *
  * @author auto create
- * @since 1.0, 2024-09-05 18:09:34
+ * @since 1.0, 2025-04-02 11:07:29
  */
 class AlipayMerchantGroupGroupmsgStatusModifyRequest
 {

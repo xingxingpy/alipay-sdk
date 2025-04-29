@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.ec.employee.add request
  *
  * @author auto create
- * @since 1.0, 2025-01-03 17:22:23
+ * @since 1.0, 2025-04-08 10:47:25
  */
 class AlipayCommerceEcEmployeeAddRequest
 {

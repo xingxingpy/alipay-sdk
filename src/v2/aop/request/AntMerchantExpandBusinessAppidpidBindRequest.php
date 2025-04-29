@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: ant.merchant.expand.business.appidpid.bind request
  *
  * @author auto create
- * @since 1.0, 2024-10-31 15:02:23
+ * @since 1.0, 2025-04-01 11:18:02
  */
 class AntMerchantExpandBusinessAppidpidBindRequest
 {

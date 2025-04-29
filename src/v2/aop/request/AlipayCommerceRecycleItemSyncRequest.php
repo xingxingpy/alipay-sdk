@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.recycle.item.sync request
  *
  * @author auto create
- * @since 1.0, 2025-02-12 10:17:22
+ * @since 1.0, 2025-04-13 17:37:27
  */
 class AlipayCommerceRecycleItemSyncRequest
 {

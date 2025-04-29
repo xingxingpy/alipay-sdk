@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.merchantcard.template.query request
  *
  * @author auto create
- * @since 1.0, 2024-12-23 10:02:25
+ * @since 1.0, 2025-04-21 10:35:25
  */
 class AlipayCommerceMerchantcardTemplateQueryRequest
 {

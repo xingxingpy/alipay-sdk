@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.transport.parking.exitinfo.sync request
  *
  * @author auto create
- * @since 1.0, 2024-08-13 15:12:07
+ * @since 1.0, 2025-03-07 18:02:27
  */
 class AlipayCommerceTransportParkingExitinfoSyncRequest
 {

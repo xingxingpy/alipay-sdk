@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.pay.app.pocketmoney.promo.consult request
  *
  * @author auto create
- * @since 1.0, 2025-01-13 14:22:24
+ * @since 1.0, 2025-04-09 21:37:29
  */
 class AlipayPayAppPocketmoneyPromoConsultRequest
 {

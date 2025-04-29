@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.merchantcard.priceproperty.create request
  *
  * @author auto create
- * @since 1.0, 2024-12-05 18:47:22
+ * @since 1.0, 2025-04-07 16:56:16
  */
 class AlipayCommerceMerchantcardPricepropertyCreateRequest
 {

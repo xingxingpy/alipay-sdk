@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.offline.provider.collaborate.task.trigger request
  *
  * @author auto create
- * @since 1.0, 2025-02-18 11:12:22
+ * @since 1.0, 2025-03-10 13:52:23
  */
 class AlipayOfflineProviderCollaborateTaskTriggerRequest
 {

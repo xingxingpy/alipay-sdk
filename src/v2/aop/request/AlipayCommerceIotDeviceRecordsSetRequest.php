@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.iot.device.records.set request
  *
  * @author auto create
- * @since 1.0, 2024-12-13 15:42:22
+ * @since 1.0, 2025-04-11 16:02:27
  */
 class AlipayCommerceIotDeviceRecordsSetRequest
 {

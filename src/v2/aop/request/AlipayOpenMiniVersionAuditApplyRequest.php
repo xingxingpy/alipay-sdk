@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.mini.version.audit.apply request
  *
  * @author auto create
- * @since 1.0, 2025-01-09 18:22:24
+ * @since 1.0, 2025-03-03 11:52:27
  */
 class AlipayOpenMiniVersionAuditApplyRequest
 {

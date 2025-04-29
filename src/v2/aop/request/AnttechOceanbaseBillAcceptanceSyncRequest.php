@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: anttech.oceanbase.bill.acceptance.sync request
  *
  * @author auto create
- * @since 1.0, 2024-05-07 15:24:07
+ * @since 1.0, 2025-04-21 11:03:24
  */
 class AnttechOceanbaseBillAcceptanceSyncRequest
 {

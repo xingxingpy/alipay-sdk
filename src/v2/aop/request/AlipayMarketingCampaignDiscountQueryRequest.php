@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.marketing.campaign.discount.query request
  *
  * @author auto create
- * @since 1.0, 2024-09-11 13:34:00
+ * @since 1.0, 2025-04-21 10:28:44
  */
 class AlipayMarketingCampaignDiscountQueryRequest
 {

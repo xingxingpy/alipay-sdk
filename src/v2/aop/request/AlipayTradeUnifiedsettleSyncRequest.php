@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.trade.unifiedsettle.sync request
  *
  * @author auto create
- * @since 1.0, 2025-01-10 17:47:24
+ * @since 1.0, 2025-03-27 14:49:40
  */
 class AlipayTradeUnifiedsettleSyncRequest
 {

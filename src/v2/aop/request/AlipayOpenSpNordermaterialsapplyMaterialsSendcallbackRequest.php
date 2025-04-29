@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.sp.nordermaterialsapply.materials.sendcallback request
  *
  * @author auto create
- * @since 1.0, 2024-11-04 11:42:22
+ * @since 1.0, 2025-04-18 15:31:06
  */
 class AlipayOpenSpNordermaterialsapplyMaterialsSendcallbackRequest
 {

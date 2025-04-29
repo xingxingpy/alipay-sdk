@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.educate.order.create request
  *
  * @author auto create
- * @since 1.0, 2024-03-26 21:19:47
+ * @since 1.0, 2025-03-20 19:29:15
  */
 class AlipayCommerceEducateOrderCreateRequest
 {

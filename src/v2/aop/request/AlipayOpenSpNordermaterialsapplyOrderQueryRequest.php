@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.sp.nordermaterialsapply.order.query request
  *
  * @author auto create
- * @since 1.0, 2024-11-04 11:22:20
+ * @since 1.0, 2025-04-18 15:31:17
  */
 class AlipayOpenSpNordermaterialsapplyOrderQueryRequest
 {

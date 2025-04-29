@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.merchantcard.deductionorder.query request
  *
  * @author auto create
- * @since 1.0, 2025-01-16 10:37:03
+ * @since 1.0, 2025-03-12 10:22:25
  */
 class AlipayCommerceMerchantcardDeductionorderQueryRequest
 {

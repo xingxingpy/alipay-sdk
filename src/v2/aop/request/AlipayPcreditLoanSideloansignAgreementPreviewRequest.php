@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.pcredit.loan.sideloansign.agreement.preview request
  *
  * @author auto create
- * @since 1.0, 2024-12-02 17:42:39
+ * @since 1.0, 2025-04-17 23:57:27
  */
 class AlipayPcreditLoanSideloansignAgreementPreviewRequest
 {

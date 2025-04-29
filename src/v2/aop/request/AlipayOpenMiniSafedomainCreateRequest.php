@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.mini.safedomain.create request
  *
  * @author auto create
- * @since 1.0, 2024-07-04 17:41:22
+ * @since 1.0, 2025-03-13 11:14:34
  */
 class AlipayOpenMiniSafedomainCreateRequest
 {

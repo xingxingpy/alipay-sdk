@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.fund.jointaccount.sign.query request
  *
  * @author auto create
- * @since 1.0, 2023-09-11 19:49:21
+ * @since 1.0, 2025-04-07 17:13:16
  */
 class AlipayFundJointaccountSignQueryRequest
 {

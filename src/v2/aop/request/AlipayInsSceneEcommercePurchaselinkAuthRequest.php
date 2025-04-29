@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.ins.scene.ecommerce.purchaselink.auth request
  *
  * @author auto create
- * @since 1.0, 2025-01-20 17:15:13
+ * @since 1.0, 2025-03-19 18:17:30
  */
 class AlipayInsSceneEcommercePurchaselinkAuthRequest
 {

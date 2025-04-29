@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.sports.venue.simple.create request
  *
  * @author auto create
- * @since 1.0, 2022-03-04 16:16:33
+ * @since 1.0, 2025-04-14 11:50:43
  */
 class AlipayCommerceSportsVenueSimpleCreateRequest
 {

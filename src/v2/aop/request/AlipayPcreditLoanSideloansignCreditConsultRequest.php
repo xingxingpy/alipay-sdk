@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.pcredit.loan.sideloansign.credit.consult request
  *
  * @author auto create
- * @since 1.0, 2024-12-10 11:32:24
+ * @since 1.0, 2025-04-18 11:02:29
  */
 class AlipayPcreditLoanSideloansignCreditConsultRequest
 {

@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.marketing.campaign.cash.status.modify request
  *
  * @author auto create
- * @since 1.0, 2024-09-11 13:34:01
+ * @since 1.0, 2025-04-21 10:28:47
  */
 class AlipayMarketingCampaignCashStatusModifyRequest
 {

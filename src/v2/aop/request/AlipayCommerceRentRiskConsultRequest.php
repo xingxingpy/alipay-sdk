@@ -5,12 +5,12 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.rent.risk.consult request
  *
  * @author auto create
- * @since 1.0, 2025-02-13 14:57:21
+ * @since 1.0, 2025-04-21 20:07:27
  */
 class AlipayCommerceRentRiskConsultRequest
 {
 	/** 
-	 * 租赁智能风险咨询（智安盾免费版）
+	 * 租赁行业风险咨询
 	 **/
 	private $bizContent;
 

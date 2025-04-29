@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.medical.insurance.claim.sync request
  *
  * @author auto create
- * @since 1.0, 2024-12-02 16:42:22
+ * @since 1.0, 2025-03-18 18:02:28
  */
 class AlipayCommerceMedicalInsuranceClaimSyncRequest
 {

@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: ant.merchant.expand.brand.asset.query request
  *
  * @author auto create
- * @since 1.0, 2023-09-04 00:26:44
+ * @since 1.0, 2025-04-01 11:33:10
  */
 class AntMerchantExpandBrandAssetQueryRequest
 {

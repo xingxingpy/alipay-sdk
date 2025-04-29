@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.fund.identitypay.member.unsign request
  *
  * @author auto create
- * @since 1.0, 2024-03-01 16:29:55
+ * @since 1.0, 2025-04-07 17:10:15
  */
 class AlipayFundIdentitypayMemberUnsignRequest
 {

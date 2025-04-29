@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.security.risk.industry.nsf.query request
  *
  * @author auto create
- * @since 1.0, 2024-04-01 14:38:42
+ * @since 1.0, 2025-04-08 20:27:26
  */
 class AlipaySecurityRiskIndustryNsfQueryRequest
 {

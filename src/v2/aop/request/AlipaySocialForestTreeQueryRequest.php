@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.social.forest.tree.query request
  *
  * @author auto create
- * @since 1.0, 2024-03-14 17:04:12
+ * @since 1.0, 2025-04-21 15:33:52
  */
 class AlipaySocialForestTreeQueryRequest
 {

@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.pay.app.pocketmoney.auth.query request
  *
  * @author auto create
- * @since 1.0, 2024-11-27 11:17:17
+ * @since 1.0, 2025-04-09 21:37:29
  */
 class AlipayPayAppPocketmoneyAuthQueryRequest
 {

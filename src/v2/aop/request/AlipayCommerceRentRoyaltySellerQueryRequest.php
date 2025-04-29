@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.rent.royalty.seller.query request
  *
  * @author auto create
- * @since 1.0, 2025-01-09 11:12:25
+ * @since 1.0, 2025-04-18 20:07:27
  */
 class AlipayCommerceRentRoyaltySellerQueryRequest
 {

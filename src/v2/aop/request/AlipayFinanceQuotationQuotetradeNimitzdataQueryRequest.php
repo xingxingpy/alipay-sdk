@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.finance.quotation.quotetrade.nimitzdata.query request
  *
  * @author auto create
- * @since 1.0, 2024-07-23 16:25:16
+ * @since 1.0, 2025-04-10 16:38:57
  */
 class AlipayFinanceQuotationQuotetradeNimitzdataQueryRequest
 {

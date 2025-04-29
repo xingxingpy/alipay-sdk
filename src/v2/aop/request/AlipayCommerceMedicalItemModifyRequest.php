@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.medical.item.modify request
  *
  * @author auto create
- * @since 1.0, 2025-02-14 11:17:23
+ * @since 1.0, 2025-04-21 11:47:27
  */
 class AlipayCommerceMedicalItemModifyRequest
 {

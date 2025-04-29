@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.operation.brandsolution.enrollmerchant.query request
  *
  * @author auto create
- * @since 1.0, 2023-09-04 00:11:43
+ * @since 1.0, 2025-04-09 16:04:58
  */
 class AlipayCommerceOperationBrandsolutionEnrollmerchantQueryRequest
 {

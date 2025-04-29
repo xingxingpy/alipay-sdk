@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.pcredit.loan.sirius.task.callback request
  *
  * @author auto create
- * @since 1.0, 2023-11-16 16:16:49
+ * @since 1.0, 2025-03-11 10:33:44
  */
 class AlipayPcreditLoanSiriusTaskCallbackRequest
 {

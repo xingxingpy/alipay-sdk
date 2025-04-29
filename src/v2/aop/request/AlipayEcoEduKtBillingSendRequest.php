@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.eco.edu.kt.billing.send request
  *
  * @author auto create
- * @since 1.0, 2024-07-05 17:22:05
+ * @since 1.0, 2025-03-20 19:17:57
  */
 class AlipayEcoEduKtBillingSendRequest
 {

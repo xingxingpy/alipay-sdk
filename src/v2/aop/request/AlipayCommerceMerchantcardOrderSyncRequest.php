@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.merchantcard.order.sync request
  *
  * @author auto create
- * @since 1.0, 2025-02-06 21:37:22
+ * @since 1.0, 2025-04-07 19:52:27
  */
 class AlipayCommerceMerchantcardOrderSyncRequest
 {

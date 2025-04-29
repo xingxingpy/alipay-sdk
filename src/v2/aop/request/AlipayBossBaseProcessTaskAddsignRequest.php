@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.boss.base.process.task.addsign request
  *
  * @author auto create
- * @since 1.0, 2024-11-27 11:11:55
+ * @since 1.0, 2025-03-20 16:41:21
  */
 class AlipayBossBaseProcessTaskAddsignRequest
 {

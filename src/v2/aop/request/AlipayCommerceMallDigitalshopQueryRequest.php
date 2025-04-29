@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.mall.digitalshop.query request
  *
  * @author auto create
- * @since 1.0, 2024-11-18 19:02:38
+ * @since 1.0, 2025-04-18 19:22:28
  */
 class AlipayCommerceMallDigitalshopQueryRequest
 {

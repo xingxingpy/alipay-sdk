@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.platform.userid.get request
  *
  * @author auto create
- * @since 1.0, 2024-09-03 15:54:28
+ * @since 1.0, 2025-03-24 12:15:45
  */
 class AlipayPlatformUseridGetRequest
 {

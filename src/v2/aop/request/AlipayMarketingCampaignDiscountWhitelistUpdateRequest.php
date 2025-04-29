@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.marketing.campaign.discount.whitelist.update request
  *
  * @author auto create
- * @since 1.0, 2024-09-11 13:34:24
+ * @since 1.0, 2025-04-21 10:28:44
  */
 class AlipayMarketingCampaignDiscountWhitelistUpdateRequest
 {

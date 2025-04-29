@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.ebpp.industry.bot.session.consult request
  *
  * @author auto create
- * @since 1.0, 2025-01-03 20:47:21
+ * @since 1.0, 2025-02-25 10:57:25
  */
 class AlipayEbppIndustryBotSessionConsultRequest
 {

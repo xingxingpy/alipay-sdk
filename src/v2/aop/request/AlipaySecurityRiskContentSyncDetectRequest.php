@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.security.risk.content.sync.detect request
  *
  * @author auto create
- * @since 1.0, 2024-03-28 00:47:01
+ * @since 1.0, 2025-04-02 17:42:17
  */
 class AlipaySecurityRiskContentSyncDetectRequest
 {

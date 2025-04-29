@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.merchant.group.assistant.msg.create request
  *
  * @author auto create
- * @since 1.0, 2024-12-13 16:12:24
+ * @since 1.0, 2025-04-10 11:42:30
  */
 class AlipayMerchantGroupAssistantMsgCreateRequest
 {

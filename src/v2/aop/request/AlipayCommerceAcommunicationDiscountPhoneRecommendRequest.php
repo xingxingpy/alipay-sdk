@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.acommunication.discount.phone.recommend request
  *
  * @author auto create
- * @since 1.0, 2024-06-13 09:57:04
+ * @since 1.0, 2025-03-13 11:12:28
  */
 class AlipayCommerceAcommunicationDiscountPhoneRecommendRequest
 {

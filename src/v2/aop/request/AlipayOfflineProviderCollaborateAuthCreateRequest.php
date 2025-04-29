@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.offline.provider.collaborate.auth.create request
  *
  * @author auto create
- * @since 1.0, 2025-02-15 19:32:22
+ * @since 1.0, 2025-02-24 10:32:23
  */
 class AlipayOfflineProviderCollaborateAuthCreateRequest
 {

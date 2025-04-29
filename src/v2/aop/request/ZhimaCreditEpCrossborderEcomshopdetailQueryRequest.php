@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: zhima.credit.ep.crossborder.ecomshopdetail.query request
  *
  * @author auto create
- * @since 1.0, 2025-01-06 15:47:21
+ * @since 1.0, 2025-02-20 15:12:23
  */
 class ZhimaCreditEpCrossborderEcomshopdetailQueryRequest
 {

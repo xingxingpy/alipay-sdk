@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.rent.order.invest.query request
  *
  * @author auto create
- * @since 1.0, 2025-01-09 11:12:25
+ * @since 1.0, 2025-04-18 20:02:27
  */
 class AlipayCommerceRentOrderInvestQueryRequest
 {

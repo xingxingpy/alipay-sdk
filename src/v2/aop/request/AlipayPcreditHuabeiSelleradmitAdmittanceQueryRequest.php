@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.pcredit.huabei.selleradmit.admittance.query request
  *
  * @author auto create
- * @since 1.0, 2024-07-04 19:33:09
+ * @since 1.0, 2025-03-24 15:55:31
  */
 class AlipayPcreditHuabeiSelleradmitAdmittanceQueryRequest
 {

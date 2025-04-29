@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.mini.message.templatelib.batchquery request
  *
  * @author auto create
- * @since 1.0, 2024-09-11 12:03:32
+ * @since 1.0, 2025-03-06 11:44:42
  */
 class AlipayOpenMiniMessageTemplatelibBatchqueryRequest
 {

@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.open.ccc.dede.cancel request
  *
  * @author auto create
- * @since 1.0, 2025-02-13 11:27:22
+ * @since 1.0, 2025-03-19 10:38:52
  */
 class AlipayOpenCccDedeCancelRequest
 {

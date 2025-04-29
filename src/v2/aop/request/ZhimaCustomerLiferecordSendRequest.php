@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: zhima.customer.liferecord.send request
  *
  * @author auto create
- * @since 1.0, 2024-04-29 11:38:06
+ * @since 1.0, 2025-02-21 14:38:14
  */
 class ZhimaCustomerLiferecordSendRequest
 {

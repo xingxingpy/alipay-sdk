@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: mybank.payment.trade.normalpay.operate.query request
  *
  * @author auto create
- * @since 1.0, 2024-07-04 15:51:33
+ * @since 1.0, 2025-04-09 11:42:56
  */
 class MybankPaymentTradeNormalpayOperateQueryRequest
 {

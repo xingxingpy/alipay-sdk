@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.trade.page.pay request
  *
  * @author auto create
- * @since 1.0, 2024-12-06 19:34:45
+ * @since 1.0, 2025-03-06 16:55:42
  */
 class AlipayTradePagePayRequest
 {

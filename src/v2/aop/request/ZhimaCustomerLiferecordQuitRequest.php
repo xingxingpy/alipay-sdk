@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: zhima.customer.liferecord.quit request
  *
  * @author auto create
- * @since 1.0, 2024-04-29 11:37:29
+ * @since 1.0, 2025-02-21 14:38:58
  */
 class ZhimaCustomerLiferecordQuitRequest
 {

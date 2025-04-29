@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.ec.enterprise.address.query request
  *
  * @author auto create
- * @since 1.0, 2024-07-22 17:44:06
+ * @since 1.0, 2025-04-21 14:17:27
  */
 class AlipayCommerceEcEnterpriseAddressQueryRequest
 {

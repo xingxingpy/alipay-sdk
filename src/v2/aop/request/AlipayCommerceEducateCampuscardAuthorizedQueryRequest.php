@@ -5,7 +5,7 @@ namespace Xingxingpy\AlipaySdk\v2\aop\request;
  * ALIPAY API: alipay.commerce.educate.campuscard.authorized.query request
  *
  * @author auto create
- * @since 1.0, 2024-08-08 21:52:05
+ * @since 1.0, 2025-03-20 19:16:11
  */
 class AlipayCommerceEducateCampuscardAuthorizedQueryRequest
 {
